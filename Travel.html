@@ -1,0 +1,1135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        #navbar {
+            width: 100%;
+            height: 50px;
+            background-color: rgba(255, 255, 255, 0.359);
+            margin: 0px auto;
+        }
+
+        #navbar ul {
+            list-style: none;
+        }
+
+        #navbar ul li a, h1 {
+            color: black;
+            text-decoration: none;
+            line-height: 50px;
+        }
+
+        #navbar ul li {
+            font-size: 1.1rem;
+        }
+
+        #navbar ul h1 {
+            margin-right: 500px;
+        }
+
+        #navbar ul li,
+        h1 {
+            float: left;
+            width: 170px;
+            text-align: center;
+        }
+
+
+        #navbar ul li a {
+            display: block;
+        }
+
+        #navbar ul li a:hover {
+            background-color: rgba(0, 0, 0, 0.397);
+            color: white;
+        }
+
+        #navbar::after {
+            content: " ";
+            background: url(" new.travel.jpg") no-repeat center center/cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 800px;
+            z-index: -1;
+        }
+
+        #navbar ul li ul li {
+            margin: 1px;
+            background-color: rgba(255, 255, 255, 0.359);
+            display: none;
+        }
+
+        #navbar ul li:hover ul li {
+            display: block;
+        }
+
+        #navbar ul li ul li:hover {
+            background-color: rgba(0, 0, 0, 0.397);
+            color: white;
+
+        }
+
+        #navbar .btn {
+            margin-top: 2px;
+            border-radius: 20px;
+            border: none;
+            background-color: rgb(0, 225, 255);
+            color: white;
+            font-weight: bold;
+            padding: 10px 25px 10px 25px;
+            font-size: 1.2rem;
+        }
+
+        #navbar .btn:active {
+            background-color: rgba(0, 145, 255, 0.755);
+            box-shadow: 1px 1px 5px 5px white;
+        }
+
+
+        /* Section-1 */
+        #section1 {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 280px;
+            width: 100%;
+        }
+
+        #section1 h1 {
+            width: 100%;
+            font-size: 4rem;
+            margin-bottom: 30px;
+        }
+
+        #section1 h2 {
+            color: white;
+            margin-bottom: 25px;
+            font-size: 2rem;
+        }
+
+        /* LATEST BUTTON  */
+        /* LATEST BUTTON  */
+        /* LATEST BUTTON  */
+        #section1 h2>div {
+            display: flex;
+            flex-grow: wrap column;
+            justify-content: center;
+            align-items: center;
+            background: #fff;
+            aspect-ratio: 16/10;
+        }
+
+        #section1 .btn {
+            position: relative;
+            width: 160px;
+            height: 45px;
+            border: 2px solid black;
+            border-radius: 50px;
+            z-index: 1;
+        }
+
+        .circle {
+            position: absolute;
+            height: 44px;
+            width: 44px;
+            background-color: black;
+            border-radius: 50px;
+            left: 0;
+            top: -1px;
+            z-index: 2;
+            transition: 0.4s cubic-bezier(1, 0, .8, 1);
+        }
+
+        #section1 .btn:hover .circle {
+            width: 160px;
+        }
+
+        .arrow {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            border-top: 3px solid white;
+            border-right: 3px solid white;
+            transform: rotate(45deg);
+            top: 15px;
+            left: 15px;
+            transition: .5s;
+        }
+
+        #section1 .btn:hover .arrow {
+            left: 30px;
+        }
+
+        #section1 .arrow::before {
+            content: " ";
+            position: absolute;
+            width: 18px;
+            height: 3px;
+            background-color: white;
+            transform: rotate(-45deg);
+            left: -5px;
+            top: 5px;
+            transition: .5s;
+            opacity: 0;
+        }
+
+        #section1 .btn:hover .arrow:before {
+            opacity: 1;
+        }
+
+        #section1 .text {
+            position: absolute;
+            top: 10px;
+            left: 55px;
+            font-size: 1.1rem;
+            letter-spacing: 2px;
+            z-index: 3;
+            transition: .5s;
+        }
+
+        #section1 .btn:hover .text {
+            color: white;
+        }
+
+        /* LATEST BUTTON  */
+        /* LATEST BUTTON  */
+        /* LATEST BUTTON  */
+
+
+        #section1 #btn3 {
+            position: relative;
+            width: 180px;
+            height: 45px;
+            left: 2px;
+            top: -15px;
+            border-radius: 50px;
+            border: 2px solid black;
+            z-index: 1;
+            transition: .5s;
+        }
+
+        #section1 #btn3 #arrow2 {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            border-top: 2px solid black;
+
+            border-right: 2px solid black;
+            transform: rotate(45deg);
+            top: 14px;
+            left: 180px;
+            transition: .3s;
+            opacity: 0;
+        }
+
+        #section1 #btn3:hover {
+            width: 210px;
+        }
+
+        #section1 #btn3:hover #arrow2 {
+            opacity: 1;
+        }
+
+        #section1 #btn3 #arrow2::before {
+            content: " ";
+            position: absolute;
+            width: 15px;
+            height: 2px;
+            background-color: black;
+            transform: rotate(-45deg);
+            top: 4px;
+            z-index: 2;
+            right: -2.8px;
+            transition: .3s;
+        }
+
+        #section1 #btn3 #text2 {
+            font-size: 1.1rem;
+            letter-spacing: 1px;
+        }
+
+
+        /* SECTION-2 */
+        #section2 {
+            display: flex;
+            flex-direction: column;
+            width: 800px;
+            margin: 320px 200px 50px 250px;
+        }
+
+        #section2 h1 {
+            width: 900px;
+            text-align: left;
+            font-size: 2rem;
+        }
+
+
+        /* SECTION-3 */
+        #section3 {
+            margin-bottom: 100px;
+        }
+
+        #container1,#container2 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #section3 #container1 #box1 {
+            border-top: 2px solid rgba(128, 128, 128, 0.271);
+            border-left: 2px solid rgba(128, 128, 128, 0.271);
+        }
+
+        #section3 #container1 #box2 {
+            border-top: 2px solid rgba(128, 128, 128, 0.271);
+        }
+
+        #section3 #container1 #box3 {
+            border-top: 2px solid rgba(128, 128, 128, 0.271);
+            border-right: 2px solid rgba(128, 128, 128, 0.271);
+        }
+
+        #section3 #container2 #box1 {
+            border-bottom: 2px solid rgba(128, 128, 128, 0.271);
+            border-left: 2px solid rgba(128, 128, 128, 0.271);
+        }
+
+        #section3 #container2 #box2 {
+            border-bottom: 2px solid rgba(128, 128, 128, 0.271);
+        }
+
+        #section3 #container2 #box3 {
+            border-bottom: 2px solid rgba(128, 128, 128, 0.271);
+            border-right: 2px solid rgba(128, 128, 128, 0.271);
+        }
+
+        #section3 .container .box p {
+            text-align: center;
+            padding: 20px;
+            padding-top: 40px;
+        }
+
+        #section3 .container .box,
+        img {
+            width: 350px;
+            height: 250px;
+        }
+
+        #section3 button {
+            position: relative;
+            transition: .5s;
+            color: aqua;
+            background-color: white;
+            border: none;
+            margin-left: 100px;
+            width: 150px;
+            height: 45px;
+        }
+
+        #section3 .noarrow {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            border-top: 2px solid aqua;
+            border-right: 2px solid aqua;
+            transform: rotate(45deg);
+            margin-top: 2px;
+            z-index: 1;
+            margin-left: 25px;
+            transition: .3s;
+            opacity: 0;
+        }
+
+        #section3 button:hover .noarrow {
+            opacity: 1;
+        }
+
+        #section3 #noarrow1 {
+            margin-left: 125px;
+        }
+
+        #section3 .noarrow::before {
+            content: " ";
+            position: absolute;
+            z-index: 2;
+            width: 15px;
+            height: 2px;
+            background-color: aqua;
+            transform: rotate(-45deg);
+            top: 5px;
+            right: -2px;
+            transition: .3s;
+        }
+
+        #section3 button:hover {
+            width: 180px;
+        }
+
+        #section3 button {
+            font-size: 1rem;
+            letter-spacing: 2px;
+        }
+
+
+
+        /* SECTION-4 */
+        #section4 {
+            margin: auto;
+            width: 700px;
+            margin-bottom: 80px;
+        }
+
+
+        /* SECTION-5 */
+        #section5 {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(128, 128, 128, 0.271);
+            margin-bottom: 80px;
+        }
+
+        #section5 input {
+            width: 500px;
+            height: 40px;
+            font-size: 1.1rem;
+            margin-bottom: 80px;
+            padding-left: 30px;
+        }
+
+        #section5 h1 {
+            color: white;
+            font-size: 3.5rem;
+            width: 500px;
+            margin-top: 80px;
+            margin-bottom: 30px;
+        }
+
+        #section5 button {
+            height: 42px;
+            font-size: 1.1rem;
+            letter-spacing: 3px;
+            padding: 10px 20px 10px 20px;
+            background-color: aqua;
+            color: white;
+            border: 3px solid rgba(128, 128, 128, 0.401);
+        }
+
+        #section5 button:active{
+            letter-spacing: 2.7px;
+            box-shadow: 3px 3px 5px rgba(128, 128, 128, 0.488);
+        }
+
+        #section5 div {
+            display: flex;
+        }
+
+
+        /* SECTION-6 */
+        #section6 #containertext {
+            margin-bottom: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #section6 .box {
+            padding: 20px 40px 20px 40px;
+            flex-direction: column;
+            display: flex;
+            width: 250px;
+            margin: 25px;
+            height: 210px;
+        }
+
+        #section6 h1 {
+            width: 250px;
+            color: white;
+            text-align: left;
+        }
+
+        #section6 p {
+            margin-bottom: 30px;
+            color: white;
+        }
+
+        #section6 button {
+            position: relative;
+            z-index: 1;
+            width: 170px;
+            background-color: transparent;
+            border: none;
+            color: white;
+            border-radius: 50px;
+            padding: 5px 30px;
+            background-color: none;
+        }
+
+        #section6 #box1 {
+            background-color: rgb(0, 255, 234);
+        }
+
+        #section6 #box2 {
+            background-color: rgb(64, 67, 255);
+        }
+
+        #section6 #box3 {
+            background-color: rgb(255, 80, 240);
+        }
+
+        #section6 .box .arrow {
+            position: absolute;
+            z-index: 2;
+            width: 10px;
+            height: 10px;
+            border-top: 2px solid white;
+            border-right: 2px solid white;
+            top: 8px;
+            left: 140px;
+        }
+
+        #section6 .box .arrow::before {
+            content: " ";
+            position: absolute;
+            z-index: 3;
+            width: 15px;
+            height: 2px;
+            background-color: white;
+            transform: rotate(-45deg);
+            top: 5px;
+            right: -2px;
+        }
+
+        #section6 .box .text {
+            font-size: 1rem;
+            letter-spacing: 1px;
+        }
+
+        #section6 button:hover {
+            box-shadow: 2px 2px 2px white;
+        }
+
+        /* SECTION-7 */
+        #section7 img {
+            margin-bottom: 10px;
+            width: 70px;
+            opacity: 0.7;
+            height: 70px;
+        }
+
+        #section7 div {
+            display: flex;
+            margin: auto;
+            flex-direction: column;
+            width: 700px;
+        }
+
+        #section7 div p {
+            color: rgb(128, 128, 128);
+            margin-bottom: 0px;
+            font-size: 1.1rem;
+        }
+
+        #section7 h2 {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            letter-spacing: 2px;
+            margin-bottom: 5px;
+        }
+
+        #section7 #img2 {
+            transform: rotate(180deg);
+            margin-left: 650px;
+            margin-bottom: 80px;
+        }
+
+
+        /* SECTION-8 */
+        #section8 .box {
+            width: 700px;
+            margin: auto;
+            margin-bottom: 80px;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #section8 h1 {
+            font-size: 2rem;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            letter-spacing: 2px;
+            width: 700px;
+            text-align: left;
+            margin-bottom: 10px;
+        }
+
+        #section8 p {
+            color: rgb(98, 98, 98);
+            font-size: 1.1rem;
+        }
+
+
+        /* SECTION-9 */
+        #section9 .container {
+            display: flex;
+        }
+
+        #section9 .container .box {
+            height: 400px;
+            width: 350px;
+            display: flex;
+            flex-direction: column;
+            margin: auto;
+            margin-bottom: 50px;
+        }
+
+        #section9 div .b {
+            display: flex;
+            flex-direction: column;
+        }
+
+        #section9 h1 {
+            text-align: left;
+            width: 345px;
+        }
+
+        #section9 button {
+            color: aqua;
+            position: relative;
+            width: 100px;
+            margin-top: 20px;
+            margin-left:5px;
+            border: none;
+            background-color: transparent;
+            z-index: 1;
+            transition: .5s;
+
+        }
+
+        #section9 button:hover {
+            width: 130px;
+        }
+
+        #section9 .arrow {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            border-top: 2px solid aqua;
+            border-right: 2px solid aqua;
+            top: 4px;
+            left: 120px;
+            transition: .5s;
+            opacity: 0;
+            z-index: 2;
+        }
+
+        #section9 button:hover .arrow {
+            left: 130px;
+            opacity: 1;
+        }
+
+        #section9 .arrow::before {
+            content: " ";
+            position: absolute;
+            width: 15px;
+            height: 1px;
+            background-color: aqua;
+            border: 1px solid aqua;
+            transform: rotate(-45deg);
+            top: 4px;
+            right: -3px;
+            transition: .5s;
+            opacity: 0;
+        }
+
+        #section9 button:hover .arrow:before {
+            opacity: 1;
+        }
+
+        #section9 .text {
+            font-size: 1.1rem;
+            letter-spacing: 1px;
+            
+        }
+
+        #section9 h1,
+        p {
+            margin-left: 5px;
+        }
+
+        #section9 p {
+            font-size: 1.1rem;
+        }
+
+
+        /* SECTION-10 */
+        #section10 .container {
+            display: flex;
+            flex-direction: column;
+            width: 700px;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+            margin-bottom: 70px;
+        }
+
+        #section10 h1 {
+            width: 700px;
+            font-size: 2rem;
+            font-family: sans-serif;
+            letter-spacing: 1px;
+            text-align: center;
+        }
+
+        #section10 p {
+            font-size: 1.3rem;
+            text-align: center;
+        }
+
+
+        /* SECTION-11 */
+        #section11 .container {
+            display: flex;
+        }
+
+        #section11 .box {
+            display: flex;
+            flex-direction: column;
+            width: 350px;
+            margin: auto;
+            padding: 10px;
+            margin-bottom: 80px;
+            border: 2px solid whitesmoke;
+            box-shadow: 4px 4px 10px 5px whitesmoke;
+        }
+
+        #section11 h1 {
+            width: 350px;
+        }
+
+        #section11 p {
+            text-align: justify;
+            margin-bottom: 30px;
+        }
+
+        #section11 button {
+            width: 100px;
+            align-self: center;
+            position: relative;
+            z-index: 1;
+            border: none;
+            background-color: transparent;
+            transition: .5s;
+            margin-bottom: 15px;
+        }
+
+        #section11 button:hover {
+            width: 130px;
+        }
+
+        #section11 .arrow {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            border-top: 2px solid aqua;
+            border-right: 2px solid aqua;
+            z-index: 2;
+            top: 2px;
+            left: 110px;
+            transition: .5s;
+            opacity: 0;
+        }
+
+        #section11 button:hover .arrow {
+            opacity: 1;
+            left: 130px;
+        }
+
+        #section11 .arrow::before {
+            content: " ";
+            position: absolute;
+            width: 15px;
+            height: 1px;
+            background-color: aqua;
+            border: 1px solid aqua;
+            transform: rotate(-45deg);
+            top: 5.5px;
+            right: -2px;
+            transition: .5s;
+            opacity: 0;
+        }
+
+        #section11 button:hover .arrow:before {
+            opacity: 1;
+        }
+
+        #section11 .text {
+            font-size: 1.1rem;
+            letter-spacing: 1px;
+            color: aqua;
+        }
+
+
+        /* SECTION-12 */
+        #section12 .container {
+            display: flex;
+            height: 280px;
+            background-color: rgba(128, 128, 128, 0.537);
+            padding-left: 30px;
+        }
+
+        #section12 .container .box {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 40px;
+        }
+
+        #section12 .container img {
+            width: 60px;
+            height: 60px;
+            margin: 30px 15px 15px 15px;
+        }
+
+        #section12 h1 {
+            width: 200px;
+            position: relative;
+            font-size: 2.2rem;
+            top: -50px;
+            text-align: left;
+        }
+
+        #section12 #box1 h1 {
+            position: relative;
+            top: -10px;
+            margin-bottom: 35px;
+        }
+
+        #section12 p {
+            position: relative;
+            top: -30px;
+            width: 200px;
+            font-size: 1.3rem;
+            letter-spacing: 1px;
+        }
+
+        #section12 #box4 h1 {
+            position: relative;
+            top: 20px;
+        }
+
+        #section12 h2 {
+            font-family:serif;
+            position: relative;
+            left: -10px;
+            letter-spacing: 2px;
+            margin-top: 35px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav id="navbar">
+            <ul>
+                <div>
+                    <h1>BuisnessM4</h1>
+                </div>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Watch Vedio</a></li>
+                <li><a href="#">Demo Pages</a>
+                    <ul>
+                        <li><a href="#">Creative Agency</a></li>
+                        <li><a href="#">Travel Agency</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Blocks</a>
+                    <ul>
+                        <li><a href="#">Features</a></li>
+                        <li><a href="#">Images & Videos</a></li>
+                        <li><a href="#">Articles</a></li>
+                        <li><a href="#">Maps & Forms</a></li>
+                        <li><a href="#">Clients & Partners</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div>
+                <button id="btn1" class="btn">Buy Now</button>
+            </div>
+        </nav>
+    </header>
+
+    <section id="section1">
+        <h1>Travel With Us</h1>
+        <h2>Explore the world any direction</h2>
+        <div>
+            <button id="btn2" class="btn">
+                <span class="circle">
+                    <span class="arrow"></span>
+                </span>
+                <span class="text">Buy Now</span>
+            </button>
+            <button id="btn3">
+                <span>
+                    <span id="arrow2"></span>
+                </span>
+                <span id="text2">Ways To Travel</span>
+            </button>
+        </div>
+    </section>
+
+    <section id="section2">
+        <h1>Our Journal</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi beatae culpa reiciendis mollitia, tempore
+            suscipit officia velit ab ea vel. Cum voluptatem architecto, debitis vitae eveniet nobis voluptate,
+            consectetur corporis veniam molestias voluptates aperiam fugiat dolorem officia at, explicabo sed. Velit
+            officia in et perferendis illo voluptas dicta ex quasi.</p>
+    </section>
+
+    <section id="section3">
+        <div id="container1" class="container">
+            <div id="box1" class="box">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo officia ullam veniam mollitia
+                    quis impedit, doloribus commodi blanditiis cumque laudantium. Temporibus impedit, eligendi quidem
+                    odio ullam nam </p>
+                <button class="button">
+                    <span class="notext">Read More</span>
+                    <span class="noarrow"></span>
+                </button>
+            </div>
+            <div id="box2" class="box">
+                <img src="nature.new.avif" alt="error">
+            </div>
+            <div id="box3" class="box">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem sequi veniam id eaque nulla unde
+                    nostrum dolores consectetur nisi hic 
+                    quis necessitatibus ratione itaque iste, quod cumque, magni
+                    eius totam.</p>
+                <button class="button">
+                    <span class="notext">Read More</span>
+                    <span class="noarrow"></span>
+                </button>
+            </div>
+        </div>
+        <div id="container2" class="container">
+            <div id="box1" class="box">
+                <img src="house.new.jpeg" alt="error">
+            </div>
+            <div id="box2" class="box">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt consequatur aliquid dolore quae
+                    error, animi dolores earum saepe odio soluta sunt officiis minus. Quas voluptas harum est quos earum
+                    cupiditate!</p>
+                <button class="button">
+                    <span class="noarrow" id="noarrow1"></span>
+                    <span class="notext">Read More</span>
+                </button>
+            </div>
+            <div id="box3" class="box">
+                <img src="beach.sunset.jpg" alt="error">
+            </div>
+        </div>
+    </section>
+
+    <section id="section4">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel impedit numquam, tenetur molestiae, quasi sed
+            quod placeat repellendus quidem cupiditate sit esse expedita quaerat neque voluptatibus minus delectus non
+            provident. Quo, facilis ab tempora dolores eligendi fugiat saepe! Ipsum, aut Lorem ipsum, dolor sit amet
+            consectetur adipisicing elit. Sed, autem! Delectus sunt a sint ducimus voluptatibus ratione dicta dolores.
+            Temporibus? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus molestiae ea neque
+            distinctio quis fuga dolores volupt </p>
+    </section>
+
+    <section id="section5">
+        <h1>Do You Wanna Go?</h1>
+        <div>
+            <div>
+                <input type="text" placeholder="Enter your E-mail address...">
+            </div>
+            <button>I want!</button>
+        </div>
+    </section>
+
+    <section id="section6">
+        <div id="containertext">
+            <div id="box1" class="box">
+                <h1>Southern Countries</h1>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat sapiente culpa, eum eaque doloribus
+                    velit eos? Esse sed odit rerum, similique </p>
+                <button class="btn">
+                    <span class="arrow"></span>
+                    <span class="text">Read More</span>
+                </button>
+            </div>
+            <div id="box2" class="box">
+                <h1>Nordic Countries</h1>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat sapiente culpa, eum eaque doloribus
+                    velit eos? Esse sed odit rerum, similique </p>
+                <button class="btn">
+                    <span class="arrow"></span>
+                    <span class="text">Read More</span>
+                </button>
+            </div>
+            <div id="box3" class="box">
+                <h1>African Countries</h1>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat sapiente culpa, eum eaque doloribus
+                    velit eos? Esse sed odit reurn size os static?rerum, </p>
+                <button class="btn">
+                    <span class="arrow"></span>
+                    <span class="text">Read More</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section id="section7">
+        <div>
+            <img src="double quotes.png" alt="error">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos exercitationem voluptates assumenda ipsa
+                accusamus! Quo impedit rem cumque sed corrupti earum tenetur aliquam voluptatem, corporis adipisci
+                voluptatibus! Saepe, velit non! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo, quia
+                ullam exercitationem mollitia id sit ut dolores labore ipsa cupiditate? Lorem ipsum dolor sit amet
+                consectetur adipisicing elit. Ipsum eveniet labore hic, voluptate deserunt dolore provident omnis et
+                eaque ipsam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt quo atque esse. Eos
+                accusamus nesciunt dolorem sequi illo placeat autem. </p>
+            <img src="double quotes.png" alt="error" id="img2">
+            <h2>National geographic</h2>
+        </div>
+    </section>
+
+    <section id="section8">
+        <div class="container">
+            <div id="box1" class="box">
+                <h1>We offer diffrent ways</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor facere ab impedit quos provident
+                    laboriosam aliquam repellendus incidunt repudiandae commodi. Lorem ipsum dolor sit amet, consectetur
+                    adipisicing elit. Esse, magni. </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="section9">
+        <div class="container">
+            <div id="box1" class="box">
+                <img src="new.cruise.jfif" alt="error">
+                <div class="b">
+                    <h1>Travel by Cruise</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, adipisci.</p>
+                    <button>
+                        <span class="arrow"></span>
+                        <span class="text">Read More</span>
+                    </button>
+                </div>
+            </div>
+            <div id="box2" class="box">
+                <img src="new.airoplain.webp" alt="error">
+                <div class="b">
+                    <h1>Travel by Air</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa, in?</p>
+                    <button>
+                        <span class="arrow"></span>
+                        <span class="text">Read More</span>
+                    </button>
+                </div>
+            </div>
+            <div id="box3" class="box">
+                <img src="new.train.avif" alt="error">
+                <div class="b">
+                    <h1>Travel by Train</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa, in?</p>
+                    <button>
+                        <span class="arrow"></span>
+                        <span class="text">Read More</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="section10">
+        <div class="container">
+            <h1>Read our blog</h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis officiis sapiente minima tenetur
+                provident ducimus beatae repudiandae expedita excepturi mollitia alias nemo quidem nostrum in, cupid</p>
+        </div>
+    </section>
+
+    <section id="section11">
+        <div class="container">
+            <div id="box1" class="box">
+                <img src="newyork.jpeg" alt="error">
+                <h1>Newyork</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis ad corrupti voluptatem, repellendus
+                    accusamus ea officiis praesentium aspernatur odit repellat.</p>
+                <button>
+                    <span class="arrow"></span>
+                    <span class="text">Read More</span>
+                </button>
+            </div>
+            <div id="box2" class="box">
+                <img src="paris.jpg" alt="error">
+                <h1>Paris</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis ad corrupti voluptatem, repellendus
+                    accusamus ea officiis praesentium aspernatur odit repellat.</p>
+                <button>
+                    <span class="arrow"></span>
+                    <span class="text">Read More</span>
+                </button>
+            </div>
+            <div id="box3" class="box">
+                <img src="hongkong.jpg" alt="error">
+                <h1>Hongkong</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis ad corrupti voluptatem, repellendus
+                    accusamus ea officiis praesentium aspernatur odit repellat.</p>
+                <button>
+                    <span class="arrow"></span>
+                    <span class="text">Read More</span>
+                </button>
+    </section>
+
+    <section id="section12">
+        <div class="container">
+            <div id="box1" class="box">
+                <h1>Contact Me</h1>
+                <p>123-A kanpur utter pradesh</p>
+            </div>
+            <div id="box2" class="box">
+                <h1>Phone</h1>
+                <p>+1 000 0000 001</p>
+            </div>
+            <div id="box3" class="box">
+                <h1>E-mail</h1>
+                <p>support463@gmail.com</p>
+            </div>
+            <div id="box4" class="box">
+                <h1>Social by:-</h1>
+                <h2>@anshika awasthi</h2>
+                <div id="image">
+                    <img src="facebook.png" alt="error">
+                    <img src="Twitter.png" alt="error">
+                    <img src="insta.png" alt="error">
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
